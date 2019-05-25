@@ -21,68 +21,57 @@ while True:
         print("90? 180? 270 degrees?")
         resp2 = input()
         if resp2 == '90':
-            im_mod = im.rotate(90)
+            im = im.rotate(90)
             time.sleep(2)
             print("Done!")
-            im_mod.show()
+            im.show()
         elif resp2 == '180':
-            im_mod = im.rotate(180)
+            im = im.rotate(180)
             time.sleep(2)
             print("Done!")
-            im_mod.show()
+            im.show()
         elif resp2 == '270':
-            im_mod = im.rotate(270)
+            im = im.rotate(270)
             time.sleep(2)
             print("Done!")
-            im_mod.show()
+            im.show()
         else:
             print("Try entering one of the numbers.")
     #elif resp == '2':
 
     elif resp == '3':
+        im2 = im
         while True:
             decision = input("To add black & white filter choose (a), \nto stay in colour/remove black & white filter choose (b) and \nto end changing filters choose (c)\n")
             if decision == 'a':
-                im_mod = im.convert("L")
+                im2 = im.convert("L")
                 time.sleep(2)
                 print("Done!")
-                im_mod.show()
+                im2.show()
             elif decision == 'b':
-                im_mod = im.convert("RGB")
+                im2 = im.convert("RGB")
                 time.sleep(2)
                 print("Done!")
-                im_mod.show()
+                im2.show()
             elif decision == 'c':
                 time.sleep(2)
                 print("Done!")
                 break
             else:
                 print("Wrong character, try again.")
+        im = im2
 
     elif resp == '4':
-        try:
-            output_im=im_mod
-            decision = input("Would you like to rewrite your file (1), or save it as a new one (2)?\n")
-            if decision == "1":
-                im_mod.save(file_name)
-                print("Done!")
-            elif decision == "2":
-                output_name = input("How would you like to name your file?\n")
-                im_mod.save(output_name+'.jpg')
-                print("Done!")
-            else:
-                print("Unknown number, try again")
-        except NameError:
-            decision = input("Would you like to rewrite your file (1), or save it as a new one (2)?\n")
-            if decision == "1":
-                im.save(file_name)
-                print("Done!")
-            elif decision == "2":
-                output_name = input("How would you like to name your file?\n")
-                im.save(output_name+'.jpg')
-                print("Done!")
-            else:
-                print("Unknown number, try again")
+       decision = input("Would you like to rewrite your file (1), or save it as a new one (2)?\n")
+        if decision == "1":
+            im.save(file_name+'.jpg')
+            print("Done!")
+        elif decision == "2":
+            output_name = input("How would you like to name your file?\n")
+            im.save(output_name+'.jpg')
+            print("Done!")
+        else:
+            print("Unknown input, try again")
 
     elif resp == '5':
         print("Hope you enjoyed it. Bye!")
