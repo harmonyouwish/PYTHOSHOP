@@ -1,3 +1,7 @@
+"""
+A simple photo editing program
+"""
+
 from __future__ import print_function
 from PIL import Image
 import os
@@ -19,17 +23,17 @@ while True:
         if resp2 == '90':
             im_mod = im.rotate(90)
             time.sleep(2)
-            print("Done.")
+            print("Done!")
             im_mod.show()
         elif resp2 == '180':
             im_mod = im.rotate(180)
             time.sleep(2)
-            print("Done.")
+            print("Done!")
             im_mod.show()
         elif resp2 == '270':
             im_mod = im.rotate(270)
             time.sleep(2)
-            print("Done.")
+            print("Done!")
             im_mod.show()
         else:
             print("Try entering one of the numbers.")
@@ -84,4 +88,4 @@ while True:
         print("Hope you enjoyed it. Bye!")
         break
     else:
-        print("Don't know what you talkin bout.")
+        print("Don't know what you talkin' bout.")
