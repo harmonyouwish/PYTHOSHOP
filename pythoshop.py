@@ -62,7 +62,7 @@ while True:
         im = im2
 
     elif resp == '4':
-       decision = input("Would you like to rewrite your file (1), or save it as a new one (2)?\n")
+        decision = input("Would you like to rewrite your file (1), or save it as a new one (2)?\n")
         if decision == "1":
             im.save(file_name+'.jpg')
             print("Done!")
