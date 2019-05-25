@@ -55,7 +55,30 @@ while True:
             else:
                 print("Wrong character, try again.")
 
-    #elif resp == '4':
+    elif resp == '4':
+        try:
+            output_im=im_mod
+            decision = input("Would you like to rewrite your file (1), or save it as a new one (2)?\n")
+            if decision == "1":
+                im_mod.save(file_name)
+                print("Done!")
+            elif decision == "2":
+                output_name = input("How would you like to name your file?\n")
+                im_mod.save(output_name+'.jpg')
+                print("Done!")
+            else:
+                print("Unknown number, try again")
+        except NameError:
+            decision = input("Would you like to rewrite your file (1), or save it as a new one (2)?\n")
+            if decision == "1":
+                im.save(file_name)
+                print("Done!")
+            elif decision == "2":
+                output_name = input("How would you like to name your file?\n")
+                im.save(output_name+'.jpg')
+                print("Done!")
+            else:
+                print("Unknown number, try again")
 
     elif resp == '5':
         print("Hope you enjoyed it. Bye!")
