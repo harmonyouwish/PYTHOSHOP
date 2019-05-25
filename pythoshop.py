@@ -40,24 +40,26 @@ while True:
     #elif resp == '2':
 
     elif resp == '3':
+        im2 = im
         while True:
             decision = input("To add black & white filter choose (a), \nto stay in colour/remove black & white filter choose (b) and \nto end changing filters choose (c)\n")
             if decision == 'a':
-                im_mod = im.convert("L")
+                im2 = im.convert("L")
                 time.sleep(2)
                 print("Done!")
-                im_mod.show()
+                im2.show()
             elif decision == 'b':
-                im_mod = im.convert("RGB")
+                im2 = im.convert("RGB")
                 time.sleep(2)
                 print("Done!")
-                im_mod.show()
+                im2.show()
             elif decision == 'c':
                 time.sleep(2)
                 print("Done!")
                 break
             else:
                 print("Wrong character, try again.")
+        im = im2
 
     elif resp == '4':
         try:
