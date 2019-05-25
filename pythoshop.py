@@ -4,9 +4,9 @@ import os
 import time
 
 os.system('cls')
-print("Welcome to Pythoshop! Edit your photoSSS now.\nEnter the file name of the image you want to edit.")
+print("Welcome to Pythoshop! Edit your photoSSS now.\nEnter the file name of the image you want to edit.\nYour file should be '.jpg' but give us just name")
 file_name = input()
-im = Image.open(file_name)
+im = Image.open(file_name+".jpg")
 time.sleep(3)
 print("Approved. File properties are: ", im.format, im.size, im.mode)
 im.show()
