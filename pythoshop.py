@@ -37,7 +37,27 @@ while True:
             im.show()
         else:
             print("Try entering one of the numbers.")
-    #elif resp == '2':
+            
+    elif resp=='2':
+        print("Instasize? (1),\nOr your own size? (2)")
+        choose=input()
+        if choose=='1':
+            im=im.resize((300,300))
+            time.sleep(2)
+            print("Done!")
+            im.show()
+        elif choose=='2':
+            print("What should be the new height?")
+            height=int(input())
+            time.sleep(1)
+            print("What should be the new width?")
+            width=int(input())
+            im=im.resize((height,width))
+            time.sleep(2)
+            print("Done!")
+            im.show()
+        else:
+            print("Ups! something wrong, please try again")
 
     elif resp == '3':
         im2 = im
